@@ -28,7 +28,7 @@ jobs:
       - name: 🖥️ RCON Connection
         uses: Plagiatus/RCON-Action@v0.2
         with:
-          server: 88.99.191.241
-          port: 50719
-          password: gutesPasswort
+          server: ${{ secrets.RCON_IP }}
+          port: ${{ secrets.RCON_PORT }}
+          password: ${{ secrets.RCON_PASSWORD }}
           commands: '["reload", "pack set \"http://88.99.191.241:25566\" push"]'
